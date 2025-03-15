@@ -37,7 +37,7 @@
         <h2>About VioletSMP</h2>
         <p>VioletSMP is a community-driven Minecraft server focused on creating a fun and engaging experience for all players. We value collaboration, creativity, and respect.</p>
         <p>We have custom plugins, events, and a dedicated staff team to ensure a smooth and enjoyable gameplay.</p>
-        <p>Server Owners: Xiao and Newbie</p>
+        <p>Server Owners: XiaoDoesArts and NewbieL1314</p>
     </section>
 
     <section id="rules" class="content-section">
@@ -61,14 +61,43 @@
         </div>
     </section>
 
-    <section id="join" class="content-section">
-        <h2>Join Us</h2>
-        <p>Server IP: Violet-SMP.Love</p>
-        <p>Discord: discord.gg/violet</p>
-    </section>
+   <section id="join" class="content-section">
+    <h2>Join Us</h2>
+    <p id="server-ip" class="clickable">Server IP: Violet-SMP.Love|Minecraft 1.21.4</p>
+    <p>Discord: <a href="http://dsc.gg/violet-smp" target="_blank">http://dsc.gg/violet-smp</a></p>
+</section>
+
+<style>
+    .clickable {
+        cursor: pointer; /* 鼠标悬停时显示手型 */
+        color: #007bff; /* 颜色改为蓝色，类似链接 */
+        
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const serverIpElement = document.getElementById("server-ip");
+
+        serverIpElement.addEventListener("click", () => {
+            // 定义需要复制的内容
+            const copyText = "Violet-SMP.Love";
+
+            // 复制到剪贴板
+            navigator.clipboard.writeText(copyText).then(() => {
+                // 复制成功后的提示
+                alert("Server IP copied to clipboard!");
+            }).catch((err) => {
+                // 复制失败的处理
+                console.error("Failed to copy: ", err);
+                alert("Failed to copy. Please try again.");
+            });
+        });
+    });
+</script>
 
     <footer>
-        <p>&copy; 2024 VioletSMP | Made by Swxrd</p>
+        <p>&copy; 2025 VioletSMP | Made by @LdmSwxrd and @NewbieMX1314</p>
     </footer>
 
     <script src="script.js"></script> </body>
